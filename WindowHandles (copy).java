@@ -56,7 +56,8 @@ public class WindowHandles {
 		//10.Get back to the parent window
 		driver.switchTo().window(Window1);
 		//11.close the browser
-		driver.close();
+		driver.switchTo().window(Window1).close();
+		driver.switchTo().window(windowlist.get(1)).close();
 
 	}
 
